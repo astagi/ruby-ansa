@@ -29,4 +29,17 @@ class AnsaTest < Minitest::Test
     assert_equal Time.parse("2018-09-19 17:35:35 +0200"),
       Ansa::get_world_news()[0].date
   end
+
+  def test_get_news_passing_category
+    stub_request(:get, "http://www.ansa.it/sito/notizie/economia/economia_rss.xml").
+    with(
+      headers: {
+        'Accept'=>'*/*',
+        'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+        'User-Agent'=>'Ruby'
+      }).
+    to_return(status: 200, body: File.read("./test/responses/economia.xml"), headers: {})
+    assert_equal "Ue a Ryanair, norme locali a personale",
+      Ansa::get_news(Ansa::ECONOMY)[0].title
+  end
 end
