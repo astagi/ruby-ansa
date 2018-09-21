@@ -23,4 +23,4 @@ You can also use `get_news` method, specifying the category you want
 
     news = Ansa::get_news(Ansa::SOCCER)
 
-For more see the documentation.
+For more see the [documentation](https://www.rubydoc.info/gems/ansa).
