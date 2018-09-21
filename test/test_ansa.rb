@@ -37,4 +37,31 @@ class AnsaTest < Minitest::Test
     assert_equal "Ue a Ryanair, norme locali a personale",
       Ansa::get_news(Ansa::ECONOMY)[0].title
   end
+
+  def test_wrong_category_raises_errors
+    assert_raises Ansa::AnsaError do
+      Ansa::get_news('fakecategory')
+    end
+  end
+
+  def test_fetch_news_raises_errors
+    assert_raises Ansa::AnsaError do
+      stub_request(:any, 'http://www.ansa.it/sito/notizie/economia/economia_rss.xml').to_raise(StandardError)
+      Ansa::get_news(Ansa::ECONOMY)
+    end
+  end
+
+  def test_fetch_news_return_no_rss
+    assert_raises Ansa::AnsaError do
+      stub_request(:get, "http://www.ansa.it/sito/notizie/economia/economia_rss.xml").
+      with(
+        headers: {
+          'Accept'=>'*/*',
+          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'User-Agent'=>'Ruby'
+        }).
+      to_return(status: 200, body: 'wrong content', headers: {})
+      Ansa::get_news(Ansa::ECONOMY)
+    end
+  end
 end

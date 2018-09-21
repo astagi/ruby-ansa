@@ -1,5 +1,7 @@
 
 module Ansa
+
+  # Base class representing a news
   class News
     def initialize(title, description, date, link)
       @title = title
