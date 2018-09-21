@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name               = "ansa"
-  s.version            = "1.0.0"
+  s.version            = "1.1.1"
   s.platform           = Gem::Platform::RUBY
   s.authors            = ["Andrea Stagi"]
   s.email              = ["stagi.andrea@gmail.com"]
@@ -28,7 +28,12 @@ Gem::Specification.new do |s|
     'lib/ansa.rb',
     'lib/ansa/client.rb',
     'lib/ansa/constants.rb',
-    'lib/ansa/news.rb'
+    'lib/ansa/errors.rb',
+    'lib/ansa/news.rb',
+    'lib/ansa/docs/dynamic_docs.rb',
+    'lib/ansa/docs/versions.rb',
+    'Rakefile',
+    'ansa.gemspec'
   ]
 
 end

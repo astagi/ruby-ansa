@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ansa (1.0.0)
+    ansa (1.1.1)
 
 GEM
   remote: https://rubygems.org/
