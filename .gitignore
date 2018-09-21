@@ -1,4 +1,11 @@
+#System files
 *.DS_Store
+
+# Generated files
 .ruby-version
 coverage
 .bundle
+.yardoc
+
+# Generated files from scripts
+lib/ansa/docs/dynamic_docs.rb
