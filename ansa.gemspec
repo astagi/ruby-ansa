@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name               = "ansa"
-  s.version            = "0.0.1"
+  s.version            = "1.0.0"
   s.platform           = Gem::Platform::RUBY
   s.authors            = ["Andrea Stagi"]
   s.email              = ["stagi.andrea@gmail.com"]

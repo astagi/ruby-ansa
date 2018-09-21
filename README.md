@@ -2,6 +2,7 @@
 
 Read news from [Ansa](http://www.ansa.it) 🗞
 
+[![Gem Version](https://badge.fury.io/rb/ansa.svg)](https://badge.fury.io/rb/ansa)
 [![Build Status](https://travis-ci.org/astagi/ruby-ansa.svg?branch=master)](https://travis-ci.org/astagi/ruby-ansa)
 [![codecov](https://codecov.io/gh/astagi/ruby-ansa/branch/master/graph/badge.svg)](https://codecov.io/gh/astagi/ruby-ansa)
 

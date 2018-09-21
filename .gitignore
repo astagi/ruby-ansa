@@ -6,6 +6,7 @@
 coverage
 .bundle
 .yardoc
+*.gem
 
 # Generated files from scripts
 lib/ansa/docs/dynamic_docs.rb
