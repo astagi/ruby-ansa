@@ -17,7 +17,7 @@ Add to your Gemfile
 Get all the news about soccer
 
     news = Ansa::get_soccer_news()
-    p news[0].title
+    puts news[0].title
 
 You can also use `get_news` method, specifying the category you want
 
